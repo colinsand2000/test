@@ -31,7 +31,7 @@ export PATH="$(brew --prefix node@22)/bin:$PATH"
 
 ### 2. Öppna projektmappen
 
-Koden finns i Codex-arbetsytan `/workspace/test`. Hämta projektfilerna till din Mac och öppna mappen i Terminal. Koden har inte pushats till GitHub automatiskt, så ett tomt GitHub-repo innehåller inte denna leverans ännu.
+Koden finns på https://github.com/colinsand2000/test och i arbetsytan `/workspace/test`. Klona repot till din Mac och öppna mappen i Terminal.
 
 Exempel om mappen finns i Hämtade filer:
 
@@ -222,4 +222,4 @@ Decimalodds normaliseras proportionellt: `(1/odds) / sum(1/odds)`. Det tar bort 
 - **Odds saknas:** kommande priser finns inte alltid i det officiella CSV-schemat. Skriv inga påhittade värden. Manuell jämförelse är tydligt märkt och saknar leverantörsverifiering.
 - **Saknade lagidentiteter:** importen använder explicita alias och entydig normalisering, inte ungefärlig stavningsmatchning. Oklara rader redovisas som omatchade.
 
-Appen är avsedd för privat personligt bruk. Offentlig fleranvändardrift, autentisering och externt förvaltad produktionsdatabas ingår inte i denna leverans. Ingen publicering, GitHub-push eller aktivering av en ny miljösnapshot görs automatiskt.
+Appen är avsedd för privat personligt bruk. Render-konfigurationen omfattar lösenordsskydd och en förvaltad PostgreSQL-databas. Källkoden har pushats till GitHub. Extern driftsättning och dess säkerhetskopior återstår att verifiera efter att hostingkontot aktiverats. En återställbar miljösnapshot har inte verifierats.

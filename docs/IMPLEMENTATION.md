@@ -24,4 +24,4 @@ V1 är en personlig analysapp utan betalningar, insatsråd eller automatisk spel
 - CSV-odds är indirekta källobservationer med okänd ursprunglig publiceringstid; de är inte garanterat aktuella bookmakerpriser. Manuella odds märks som manuella.
 - Historiska efterhandsanalyser är inte certifierade förhandsloggar. Separat framåtriktad utvärdering börjar med de prognoser V1 faktiskt registrerar före avspark.
 - Ingen lönsamhet är verifierad. Kandidatgränser är heuristiker. Kalibrering/ensemble har inte godkänts via en oberoende framtida holdout.
-- Privat bruk, ingen offentlig fleranvändardrift eller automatisk GitHub-publicering.
+- Privat bruk med lösenordsskydd i Render-konfigurationen. Källkoden är publicerad på GitHub; extern drift kräver aktiverat hostingkonto.

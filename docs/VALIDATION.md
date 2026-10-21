@@ -30,7 +30,7 @@ Förhandsloggen hade vid kontrollen **0 avgjorda matcher** och väntande verklig
 
 ## Driftgränser
 
-Inga betaluppgifter, betalningsintegrationer eller riktiga insatser finns. Startsystemet är avsett för privat lokal användning. Ingen offentlig driftsättning eller GitHub-push har genomförts.
+Inga betaluppgifter, betalningsintegrationer eller riktiga insatser finns. Startsystemet stöder privat lokal användning och lösenordsskyddad Render-drift. Källkoden har pushats till GitHub. Ingen extern driftsättning har genomförts.
 
 CL/EL, xG, frånvaro och startelvor har ingen ansluten aktuell källa. Källstatus visar detta. Källornas publiceringstid är inte alltid känd och de är inte realtidsfeeds.
 
@@ -41,3 +41,9 @@ Installations- och startkonfiguration sparas separat i miljöutkastet. Sparat ut
 Hela appen startades via `bash scripts/start.sh`: installation, PostgreSQL, migrationer, två källsynkar, prognoser, frontendbygge, webbservrar och timvis synkarbetare. Faktiska proxyanrop verifierade 52 matcher/18 kandidater/34 avstå, fem anslutna nationella ligor och en aktuell indirekt CSV-oddsobservation. Prognos #310 reproducerades med alla fyra modellutdata.
 
 En kontrollsummerad PostgreSQL-dump på cirka 10,9 MB skapades under arbetsytans artifacts. Den återställdes till en separat tillfällig databas och prognosantalet verifierades mot originalet; testdatabasen togs därefter bort. Återställningsvakten bekräftade att befintliga appdata inte skrivs över. Detta verifierar backupens återställbarhet, inte en publicerad molnsnapshot eller extern katastrofåterställning.
+
+## Hostingkontroller
+
+46 backendtester och frontendens produktionsbygge passerade. Separat inloggningstest verifierade 401 utan inloggning, 200 med korrekt lösenord och 503 när obligatoriskt lösenord saknas. Render-avbildningen byggdes med låsta beroenden. Plattformens plan, fakturering och faktiska externa driftsättning behöver verifieras efter kontoaktivering.
+
+Ett isolerat containertest med tom SQLite-databas verifierade migreringar, paketerad API/frontend, health 200, anonym sida 401 och autentiserad sida 200. Testet körde inte Render-plattformen eller extern källsynk.
